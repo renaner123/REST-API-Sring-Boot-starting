@@ -40,5 +40,14 @@ public class UserRepositoryTest {
 		
 		
 	}
+	
+	@Test
+	public void testFindUserByEmail() {
+		String email = "laraass@yahoo.com.br";
+		
+		User user = repo.findByEmail(email);
+		
+		assertThat(user).isNotNull();
+	}
 
 }
