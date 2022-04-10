@@ -10,13 +10,13 @@ import com.example.demo.repository.UserRepository;
 public class CustomUserDetailsService implements UserDetailsService {
 
 	@Autowired
-	private UserRepository repo;
+	private UserRepository userRepo;
 	
 	//buscar um usuário pelo email no banco de dados
 	@Override
 	public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
 		
-		User user = repo.findByEmail(email);
+		User user = userRepo.findByEmail(email);
 		if(user == null) {
 			throw new UsernameNotFoundException("User not found");
 		}
