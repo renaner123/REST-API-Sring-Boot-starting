@@ -27,7 +27,7 @@ public class UserRepositoryTest {
 	@Test
 	public void testCreateUser() {
 		User user = new User();
-		user.setEmail("laracahass@yahoo.com.br");
+		user.setEmail("larahass@yahoo.com.br");
 		user.setPassword("123451236");
 		user.setFirstname("Larissa");
 		user.setLastname("Rodolfo");
