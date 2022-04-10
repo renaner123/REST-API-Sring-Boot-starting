@@ -22,7 +22,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	private DataSource dataSource;
 	
 	@Bean
-	public UserDetailsService userDetaisService() {
+	public UserDetailsService userDetailsService() {
 		return new CustomUserDetailsService();
 	}
 	
@@ -50,7 +50,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	//importante, configura login e logout
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-		http.authorizeHttpRequests()
+		http.authorizeRequests()
 			//usuario precisa estar logado para ver a página
 			.antMatchers("/list_users").authenticated()
 			.anyRequest().permitAll()
@@ -60,7 +60,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 				.defaultSuccessUrl("/list_users")
 				.permitAll()
 			.and()
-			.logout().logoutSuccessUrl("/");
+			.logout().logoutSuccessUrl("/").permitAll();
 	}	
 	
 }
