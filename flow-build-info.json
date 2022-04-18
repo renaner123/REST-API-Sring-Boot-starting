@@ -1,0 +1,15 @@
+{
+  "compatibilityMode": false,
+  "productionMode": true,
+  "enableDevServer": false,
+  "chunks": {
+    "fallback": {
+      "jsModules": [
+        "@vaadin/vaadin-grid/src/vaadin-grid-tree-toggle.js",
+        "frontend://ironListConnector.js"
+      ],
+      "cssImports": [
+      ]
+    }
+  }
+}

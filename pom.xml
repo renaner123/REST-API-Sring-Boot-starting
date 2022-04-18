@@ -11,10 +11,12 @@
 	<groupId>com.springjava.renan</groupId>
 	<artifactId>springjava-api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
 	<name>springjava-api</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>		
+		<maven.test.skip>true</maven.test.skip>
 		<vaadin.version>14.8.3</vaadin.version>
 	</properties>
 	
@@ -45,6 +47,10 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
+		</dependency>
+		<dependency>
+	        <groupId>org.springframework.boot</groupId>
+	        <artifactId>spring-boot-starter-tomcat</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.projectlombok</groupId>
