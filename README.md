@@ -1,7 +1,7 @@
 # -REST-API-Sring-Boot-starting
 Anotações e informações referentes ao exemplo disponível em https://www.youtube.com/watch?v=aRLoSDOlU3w de como criar uma REST API com Spring Boot.
 
-## Alguns conceitos/libs/frameworks usados.
+## Alguns conceitos/libs/frameworks usados
 
 ### Lambok
 É uma biblioteca java utilizada para "omitir" a configuração de getters, setters, to_string, hash_code, equals, construtor em uma classe. É necessário usar apenas a marcação @Data que a biblioteca define-os. Existem outras marcações que podem ser vistas em [projectlombok](https://projectlombok.org/features/all).
@@ -36,11 +36,11 @@ Para criar o projeto foi utilizado o software Spring Tool Suite 4 (STS4), Para c
     * Vaadin
 1. Aguardar o download/instalação
 
-Caso queira adicionar alguma outra depência após criar o projeto, pode clicara com o direito em cima do projeto ir em Spring -> Add Starters.
+Caso queira adicionar alguma outra dependência após criar o projeto, pode clicar com o botão direito em cima do projeto e ir em Spring -> Add Starters.
 
 Outra opção é usar o https://start.spring.io para gerar o projeto "esqueleto" inicial.
 
-As dependências instaladas podem ser vistas no arquivo [pom.xml](/pom.xml). Esse arquivo contém os detalhes de configuração necessário para construir o projeto Maven. Por exemplo, para inserir as depências para uso de Bootstrap,CSS e JQuery, é possível adicionar o seguinte trecho no arquivo pom.xml
+As dependências instaladas podem ser vistas no arquivo [pom.xml](/pom.xml). Esse arquivo contém os detalhes de configurações necessárias para construir o projeto Maven. Por exemplo, para inserir as depências para uso de Bootstrap, CSS e JQuery, é possível adicionar o seguinte trecho no arquivo pom.xml
 
 ```xml
 <dependency>
@@ -59,7 +59,7 @@ As dependências instaladas podem ser vistas no arquivo [pom.xml](/pom.xml). Ess
 </dependency>
 ```
 
-Com as depências adicionadas, é necessário inserir os scripts no arquivo HTML desejado.
+Com as depências adicionadas, por se tratar de dependência de página HTML, é necessário inserir os scripts no arquivo HTML desejado.
 
 ```html
 <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
@@ -70,13 +70,13 @@ Com as depências adicionadas, é necessário inserir os scripts no arquivo HTML
 
 [CustomUserDetails](/src/main/java/com/example/demo/CustomUserDetails.java) - Implementa UserDetails. Contém as informações do usuário que pode ser usada pelo Spring Security.
 
-[CustomUserDetailsService](/src/main/java/com/example/demo/CustomUserDetailsService.java) - Implementa UserDetailsService que serve para acesso ao banco de dados, como um DAO. Procura usuários pelo email.
+[CustomUserDetailsService](/src/main/java/com/example/demo/CustomUserDetailsService.java) - Implementa UserDetailsService. Serve para acesso ao banco de dados, como um DAO. Procura usuários pelo email.
 
-[PasswordEncoder](/src/main/java/com/example/demo/PasswordEncoder.java) - Apenas para gerar um senha usando BCryptPasswordEncoder para teste.
+[PasswordEncoder](/src/main/java/com/example/demo/PasswordEncoder.java) - Apenas para gerar uma senha usando BCryptPasswordEncoder para teste.
 
-[SpringJavaApiApplication](/src/main/java/com/example/demo/SpringjavaApiApplication.java) - Classe que é executa pelo projeto (main).
+[SpringJavaApiApplication](/src/main/java/com/example/demo/SpringjavaApiApplication.java) - Classe que é executada pelo projeto (main).
 
-[WebSecurityConfig](/src/main/java/com/example/demo/WebSecurityConfig.java) - Implementa WebSecurityConfigurerAdapter responsável por controlar a autenticação dos usuários, permitindo login e logout.
+[WebSecurityConfig](/src/main/java/com/example/demo/WebSecurityConfig.java) - Implementa WebSecurityConfigurerAdapter. Responsável por controlar a autenticação do usuário, permitindo login e logout.
 
 [UserController](/src/main/java/com/example/demo/controller/UserController.java) - Possui as rotas que podem ser acessadas pelo programa.
 
@@ -84,7 +84,7 @@ Com as depências adicionadas, é necessário inserir os scripts no arquivo HTML
 
 [UserRepository](/src/main/java/com/example/demo/repository/UserRepository.java) - Um componente/repositório que vai interagir com o banco de dados para acessar a tabela User.
 
-[UserRepositoryTest](/src/test/java/com/example/demo/UserRepositoryTest.java) - Testa se o Repository está funcionando, injeta informação no banco de dados. 
+[UserRepositoryTest](/src/test/java/com/example/demo/UserRepositoryTest.java) - Testa se o Repository está funcionando, injeta (testa) informação no banco de dados. 
 
 ## Marcações usadas no exemplo
 
@@ -98,7 +98,7 @@ importados de javax.persistence:
     Estratégia que pode ser usada para geração do Id, no exemplo foi usado o IDENTITY que serve para auto incrementar o id
 
 * @Column  ->
-Não precisa marcação, a entity mapeia todos os atributos, a não ser que queria por alguma restrição na coluna por exemplo nullable, unique, length
+Não precisa marcação, a entity mapeia todos os atributos, a não ser que queria por alguma restrição na coluna, por exemplo, nullable, unique, length
 
 importado de lombok:
 * @Data  ->
@@ -214,7 +214,7 @@ Para executar localmente, é necessário ter instalado no sevidor:
 * Configuração das variáveis de ambientes e
 * Apache Tomcat 9.
 
-Para verificar as versões instaladas, assim como fazer a instalação caso necessário, pode-se usar o guia disponível em: [https://docs.cronapp.io](https://docs.cronapp.io/pages/viewpage.action?pageId=145490718#:~:text=Versão%20do%20Maven&text=Caso%20exiba%20uma%20versão%20diferente%20ou%20a%20mensagem%20"%27mvn%27configurar%20as%20variáveis%20de%20ambiente) ou configurar através de um [Container Docker](https://docs.cronapp.io/display/CRON2/Executar+projeto+localmente+via+Docker).
+Para verificar as versões instaladas, assim como fazer a instalação caso necessário, pode-se usar o guia disponível em: [https://docs.cronapp.io](https://docs.cronapp.io/pages/viewpage.action?pageId=145490718#:~:text=Versão%20do%20Maven&text=Caso%20exiba%20uma%20versão%20diferente%20ou%20a%20mensagem%20"%27mvn%27configurar%20as%20variáveis%20de%20ambiente) ou configurar através de um [contêiner Docker](https://docs.cronapp.io/display/CRON2/Executar+projeto+localmente+via+Docker).
 
 ## Referências:
 
