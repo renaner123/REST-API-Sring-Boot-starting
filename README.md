@@ -219,23 +219,13 @@ Para verificar as versões instaladas, assim como fazer a instalação caso nece
 ## Referências:
 
 https://www.codejava.net/frameworks/spring-boot/user-registration-and-login-tutorial
-
 https://www.youtube.com/watch?v=aRLoSDOlU3w
-
 [https://docs.cronapp.io](https://docs.cronapp.io/pages/viewpage.action?pageId=145490718#:~:text=Versão%20do%20Maven&text=Caso%20exiba%20uma%20versão%20diferente%20ou%20a%20mensagem%20"%27mvn%27configurar%20as%20variáveis%20de%20ambiente)
-
 https://www.devmedia.com.br/guia/hibernate/38312#:~:text=Hibernate%20é%20o%20framework%20para,a%20criação%20da%20especificação%20JPA
-
 https://docs.jboss.org/hibernate/annotations/3.5/reference/en/html/entity.html
-
 https://projectlombok.org
-
 https://www.oracle.com/java/technologies/persistence-jsp.html
-
 https://spring.io/tools
-
 https://www.thymeleaf.org
-
 https://vaadin.com
-
 https://docs.cronapp.io/display/CRON2/Executar+projeto+localmente+via+Docker
